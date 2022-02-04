@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: demo-app-kust
-  name: demo-app-kust
+    app:demo-app-raw
+  name:demo-app-raw
   namespace: notdefault
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo-app-kust
+      app:demo-app-raw
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: demo-app-kust
+        app:demo-app-raw
     spec:
       containers:
         - image: debian

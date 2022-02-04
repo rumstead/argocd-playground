@@ -5,9 +5,14 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'git@github.com:rumstead/argocd-namespace-bug.git'
+    repoURL: 'https://github.com/rumstead/argocd-namespace-bug.git'
     path: manifests/kustomize/
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
