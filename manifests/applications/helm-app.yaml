@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-app
+spec:
+  project: default
+  source:
+    repoURL: 'git@github.com:rumstead/argocd-namespace-bug.git'
+    path: manifests/helm/
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default

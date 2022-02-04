@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo-app-kust
+  name: demo-app-kust
+  namespace: notdefault
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app-kust
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demo-app-kust
+    spec:
+      containers:
+        - image: debian
+          name: demo
+          command:
+            - /bin/sleep
+            - "10d"
+          resources:
+            limits:
+              cpu: 10m
+              memory: 10Mi
+status: {}
