@@ -1,0 +1,3 @@
+manifestpath: manifests/kustomize/
+version: HEAD
+name: git-file

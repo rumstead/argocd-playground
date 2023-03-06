@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: git-file
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/rumstead/argocd-playground.git
+        revision: HEAD
+        files:
+          - path: "appsets/**/demo/config/**/*.yaml"
+  template:
+    metadata:
+      name: "{{ name }}"
+      labels:
+        app-type: git-file
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/rumstead/argocd-playground.git
+        path: "{{ manifestpath }}"
+        targetRevision: "{{ version }}"
+      destination:
+        namespace: "{{ name }}"
+        name: in-cluster
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          prune: true
+
