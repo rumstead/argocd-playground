@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/rumstead/argocd-playground.git
         revision: HEAD
         directories:
-          - path: "manifests/helm"
+          - path: "manifests/helm/demo-app-helm"
           - path: "manifests/raw"
   template:
     metadata:

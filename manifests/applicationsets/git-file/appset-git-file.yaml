@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/rumstead/argocd-playground.git
         revision: HEAD
         files:
-          - path: "appsets/**/demo/config/**/*.yaml"
+          - path: "manifests/applicationsets/git-file/config/config.yaml"
   template:
     metadata:
       name: "{{ name }}"
