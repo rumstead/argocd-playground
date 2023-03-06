@@ -19,10 +19,10 @@ spec:
       project: default
       source:
         repoURL: https://github.com/rumstead/argocd-playground.git
-        path: "{{ manifestpath }}"
-        targetRevision: "{{ version }}"
+        path: "{{ path }}"
+        targetRevision: "HEAD"
       destination:
-        namespace: "{{ name }}"
+        namespace: "git-dir-{{ path.basename }}"
         name: in-cluster
       syncPolicy:
         syncOptions:
