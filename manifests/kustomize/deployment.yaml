@@ -5,7 +5,6 @@ metadata:
   labels:
     app: demo-app-kust
   name: demo-app-kust
-  namespace: notdefault
 spec:
   replicas: 1
   selector:
