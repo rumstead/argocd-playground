@@ -22,4 +22,11 @@ From here, edit the helm chart to include the radius annotations.
     radapp.io/enabled: 'true'
 ```
 ### Create the Argo CD application
-[see here](./argocd-config/)
+[You can view the app here](./argocd-config/radius-app.yaml)
+
+Assuming you deployed Argo CD into the Argo CD namespace: 
+```shell
+kubectl apply -f radius/argocd-config/radius-app.yaml -n argocd
+```
+
+You should now see the demo application deployed. 
