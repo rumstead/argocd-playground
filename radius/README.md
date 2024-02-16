@@ -30,3 +30,17 @@ kubectl apply -f radius/argocd-config/radius-app.yaml -n argocd
 ```
 
 You should now see the demo application deployed. 
+![argo-cd](./images/argo-radius-deploy.png)
+
+### Radius picks it up
+```shell
+rad app graph -a demo -g default-demo
+Displaying application: demo
+
+Name: webapp (Applications.Core/containers)
+Connections: (none)
+Resources:
+  webapp (kubernetes: apps/Deployment)
+
+
+```

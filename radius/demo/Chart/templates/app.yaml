@@ -4,8 +4,8 @@ metadata:
   name: webapp
   namespace: {{ .Release.Namespace }}
   # adding this here so radius picks up the resources
-  annotations:
-    radapp.io/enabled: 'true'
+#  annotations:
+#    radapp.io/enabled: 'true'
 spec:
   selector:
     matchLabels:
