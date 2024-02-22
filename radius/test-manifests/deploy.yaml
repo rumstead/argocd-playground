@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  namespace: demo
+  labels:
+    app: test-deploy
+  annotations:
+    argocd.argoproj.io/tracking-id: 'radius-app:apps/Deployment:demo/webapp'
+  name: test-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: test-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-deploy
+    spec:
+      containers:
+        - image: nginx
+          name: nginx

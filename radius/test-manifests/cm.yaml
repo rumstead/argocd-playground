@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: foo
+  namespace: demo
+  annotations:
+    argocd.argoproj.io/tracking-id: 'radius-app:apps/Deployment:demo/webapp'
