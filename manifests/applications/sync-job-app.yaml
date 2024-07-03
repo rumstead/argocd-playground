@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: raw-app
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/rumstead/argocd-playground.git'
+    path: manifests/sync-hook
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
