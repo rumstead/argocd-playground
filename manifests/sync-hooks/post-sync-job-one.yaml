@@ -19,7 +19,7 @@ spec:
           command:
             - /bin/sleep
           args:
-            - '10d'
+            - '1m'
           resources:
             limits:
               cpu: 20m
