@@ -6,7 +6,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/rumstead/argocd-playground.git'
-    path: manifests/sync-hook
+    path: manifests/sync-hooks
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
