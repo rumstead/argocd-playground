@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/sync-wave: "2"
-    name: job-two
+  name: job-two
 spec:
   ttlSecondsAfterFinished: 60
   activeDeadlineSeconds: 360
