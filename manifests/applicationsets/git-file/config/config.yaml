@@ -1,4 +1,4 @@
 manifestpath: manifests/kustomize/
 version: HEAD
 name: git-file
-label: foo
+label: bar
