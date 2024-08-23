@@ -1,0 +1,6 @@
+acmeService:
+  name: quota-calculator
+  namespace: quota-calculator
+
+release:
+  targetRevision: v3.7.0
