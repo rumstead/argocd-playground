@@ -17,7 +17,7 @@ spec:
       destination:
         namespace: '{{acmeService.namespace}}'
         server: https://kubernetes.default.svc
-      project: ag-service
+      project: default
       source:
         path: manifests/kustomize/
         repoURL: https://github.com/rumstead/argocd-playground.git

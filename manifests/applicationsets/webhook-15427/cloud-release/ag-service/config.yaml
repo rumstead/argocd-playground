@@ -3,4 +3,4 @@ acmeService:
   namespace: quota-calculator
 
 release:
-  targetRevision: 1.0.0
+  targetRevision: test
