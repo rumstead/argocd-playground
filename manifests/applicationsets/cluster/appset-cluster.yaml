@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cluster
+spec:
+  generators:
+    - clusters:
+        selector:
+          matchLabels:
+            kubernetes.cnp.io/cluster.segment: multitenant
+  template:
+    metadata:
+      name: "cluster-generator-{{name}}"
+      labels:
+        app-type: cluster
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/rumstead/argocd-playground.git
+        path: "manifests/kustomize/"
+        targetRevision: "HEAD"
+      destination:
+        namespace: "cluster-generator"
+        name: {{name}}
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          prune: true
+
