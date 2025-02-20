@@ -13,8 +13,6 @@ spec:
   strategy: {}
   template:
     metadata:
-      annotations:
-          rumstead: 'an-annotation-committed-in-git'
       creationTimestamp: null
       labels:
         app: demo-app-raw
