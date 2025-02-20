@@ -13,6 +13,7 @@ spec:
   strategy: {}
   template:
     metadata:
+      annotations: {}
       creationTimestamp: null
       labels:
         app: demo-app-raw
