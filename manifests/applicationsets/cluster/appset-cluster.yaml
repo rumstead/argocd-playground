@@ -21,7 +21,7 @@ spec:
         targetRevision: "HEAD"
       destination:
         namespace: "cluster-generator"
-        name: {{name}}
+        name: "{{name}}"
       syncPolicy:
         syncOptions:
           - CreateNamespace=true
