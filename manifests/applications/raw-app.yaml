@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: raw-app
 spec:
-  project: default
+  project: test-project
   source:
     repoURL: 'https://github.com/rumstead/argocd-playground.git'
     path: manifests/raw/
