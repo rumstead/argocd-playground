@@ -9,7 +9,7 @@ spec:
     path: manifests/raw/
     targetRevision: HEAD
   destination:
-    server: 'https://kubernetes.default.svc'
+    name: 'dev'
     namespace: default
   syncPolicy:
     automated:
