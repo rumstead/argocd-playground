@@ -7,7 +7,7 @@ spec:
     - clusters:
         selector:
           matchLabels:
-            kubernetes.cnp.io/cluster.segment: multitenant
+            argocd.argoproj.io/secret-type: cluster
   template:
     metadata:
       name: "cluster-generator-{{name}}"
